@@ -130,7 +130,7 @@ a、验证经过php脚本的代理后sqlmap依然能判断出存在sql漏洞
 
 uname=admin&passwd=123456&submit=Submit
 
-那么测试脚本sql_test.php里面提交的参数也必须做调整
+测试脚本sql_test.php里面提交的参数也必须做调整
 
 ```
 <?php
