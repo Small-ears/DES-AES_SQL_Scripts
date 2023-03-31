@@ -3,14 +3,21 @@
 环境需求：使用 PHP 7.1 及以下版本，因此mcrypt 加密扩展已经在 PHP 7.2 中被弃用，加解密脚本因为直接调用远端加密库，因此需要能访问互联网，其他脚本不用。
 
 脚本说明：
+
 AES_decryption.php  #使用ECB，Pkcs7填充模式，如果需要其他模式可以直接在代码更改mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7即可，代码中已添加详细注释；
+
 AES_encrypt.php     #同上
+
 DES                 #同上
+
 RSA                 #不涉及加密模式以及填充方式
+
 如果需要加入随机数/IV可以参考test文件中的脚本对其他脚本进行修改；
 
 SQL（不同场景需要修改小部分代码）
+
 AES_SQL.php         #使用ECB以及Pkcs7填充方式，ECB模式无法加入随机数，主要为了配合Sqlmap使用；
+
 DES_SQL.php
 
 
