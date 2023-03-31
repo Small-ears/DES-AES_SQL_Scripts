@@ -1,15 +1,15 @@
-<?php  //注意：mcrypt 扩展已经在 PHP 7.2 中被弃用，建议使用其他加密扩展或者使用 PHP 7.1 及以下版本。
+<?php
 // 接收GET请求中的参数,需要更多参数可以自加自减
 $param1 = $_GET['param1'];
 $param2 = $_GET['param2'];
 
-// 加密密钥,目标网站上参考文章进行扣取
+// 设置key
 $key = "akcdefg3bcdkffff";   
 
 
 $block_size = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);   //加密模式
 
-//填充方式
+//填充方式param1处理
 $pad_size = $block_size - (strlen($param1) % $block_size);
 $param1 .= str_repeat(chr($pad_size), $pad_size);
 
