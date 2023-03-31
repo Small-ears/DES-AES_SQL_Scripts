@@ -6,7 +6,7 @@
 
 需要使用 PHP 7.1 及以下版本，因此mcrypt 加密扩展已经在 PHP 7.2 中被弃用，加解密脚本因为直接调用远端加密库，因此需要能访问互联网，其他脚本不用，php环境可以使用phpStudy，灵活切换php版本。
 
-![06](README.assets/06.jpg)
+![06](https://user-images.githubusercontent.com/56350031/229093307-0150d6f6-87f4-4433-ae58-8bdca0db05a1.jpg)
 
 ### 0x03 脚本说明：
 
@@ -97,10 +97,12 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
 
 #### AES加密解密脚本演示：（DES和AES一样，相差无几）
 
+![229034928-fc6c4814-8bce-4358-b387-eb54766dd03f](https://user-images.githubusercontent.com/56350031/229093404-4b827324-47a1-4f76-892a-ea6fa709d9c8.png)
 
 
 效果：
 
+![229035051-bdeac323-37ff-4cb3-ac29-6ee98a55fe70](https://user-images.githubusercontent.com/56350031/229093434-0a098fdd-39c1-454f-a2dd-6806f91285c0.png)
 
 
 #### SQL注入脚本演示：
@@ -123,7 +125,8 @@ a、验证经过php脚本的代理后sqlmap依然能判断出存在sql漏洞
 
 这里有个坑，提交的数据必须要和view soure格式一致
 
-![01](README.assets/01.jpg)
+![01](https://user-images.githubusercontent.com/56350031/229093511-de539197-8f7c-4f68-9659-9992a3badaee.jpg)
+
 
 uname=admin&passwd=123456&submit=Submit
 
@@ -180,7 +183,8 @@ qlmap -u "http://10.10.70.6/php/test/sql_test.php?param1=test&param2=123456" -p 
 
 测试截图
 
-![02](README.assets/02.jpg)
+![02](https://user-images.githubusercontent.com/56350031/229093611-576c978c-fe0f-43ca-b61a-45181641c04a.jpg)
+
 
 b、验证加密后的参数能准确到达目标服务器，增加加密代码
 
@@ -216,13 +220,15 @@ sqlmap -u "http://10.10.70.6/php/test/sql_test.php?param1=test&param2=123456" -p
 
 测试截图
 
-![03](README.assets/03.jpg)
+![03](https://user-images.githubusercontent.com/56350031/229093690-98b399fd-a93f-4d4f-b0b4-0be68c9809aa.jpg)
+
 
 可以看到用户名为明文，sqlmap提交过来的口令为密文，将第三行密文解密如下：
 
-![04](README.assets/04.jpg)
+![04](https://user-images.githubusercontent.com/56350031/229093726-327f6fee-4f04-46fb-97cc-80417cfbe53a.jpg)
 
-![05](README.assets/05.jpg)
+
+![05](https://user-images.githubusercontent.com/56350031/229093758-f15b64a2-78db-4033-8066-677bd57b3f49.jpg)
 
 DES注入脚本一致，因此不做验证。
 
