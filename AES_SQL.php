@@ -4,7 +4,7 @@ $param1 = $_GET['param1'];
 $param2 = $_GET['param2'];
 
 // 加密密钥,目标网站上参考文章进行扣取
-$key = "akcdefg3bcdkfg12";   
+$key = "akcdefg3bcdkffff";   
 
 
 $block_size = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);   //加密模式
