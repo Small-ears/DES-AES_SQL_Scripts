@@ -17,9 +17,9 @@ RSA                 #不涉及加密模式以及填充方式
 
 SQL（不同场景需要修改小部分代码）
 
-AES_SQL.php         #使用ECB以及Pkcs7填充方式，ECB模式无法加入随机数，主要为了配合Sqlmap使用；
+AES_SQL.php         #POST方式提交，使用ECB以及Pkcs7填充方式，ECB模式无法加入随机数，主要为了配合Sqlmap使用；
 
-DES_SQL.php
+DES_SQL.php         #GET方式提交，其余和AES的一样，如果遇到POST的提交方式，把AES的提交方式复制替换就行
 
 
 AES加密解密脚本演示：（DES和AES一样，包括代码相差无几）
