@@ -93,6 +93,14 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
   $plaintext .= $padding;
   ```
 
+- 请求数据，JSON格式
+  ```
+  $data = array("name" => "John Doe", "email" => "johndoe@example.com");  //key value
+  $data_json = json_encode($data);
+
+  curl_setopt($curl, CURLOPT_POSTFIELDS, $data_json);   //引入请求
+  ```
+
 ### 0x04 功能演示
 
 #### AES加密解密脚本演示：（DES和AES一样，相差无几）
