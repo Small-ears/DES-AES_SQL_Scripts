@@ -253,6 +253,7 @@ wireshark查看请求包
 
 ![image](https://user-images.githubusercontent.com/56350031/229400336-45e45cfd-42d5-41ae-994c-57abe753d98f.png)
 
+服务器上接收到的数据
 
 ![03](https://user-images.githubusercontent.com/56350031/229093690-98b399fd-a93f-4d4f-b0b4-0be68c9809aa.jpg)
 
