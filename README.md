@@ -249,6 +249,11 @@ sqlmap -u "http://10.10.70.6/php/test/sql_test.php?param1=test&param2=123456" -p
 
 测试截图
 
+wireshark查看请求包
+
+![image](https://user-images.githubusercontent.com/56350031/229400336-45e45cfd-42d5-41ae-994c-57abe753d98f.png)
+
+
 ![03](https://user-images.githubusercontent.com/56350031/229093690-98b399fd-a93f-4d4f-b0b4-0be68c9809aa.jpg)
 
 
