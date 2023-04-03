@@ -124,7 +124,7 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
 
 ### 0x04 功能演示
 
-#### AES加密解密脚本演示：（DES和AES一样，相差无几）
+#### AES加密脚本演示：（DES和AES一样，相差无几）
 
 ![229034928-fc6c4814-8bce-4358-b387-eb54766dd03f](https://user-images.githubusercontent.com/56350031/229093404-4b827324-47a1-4f76-892a-ea6fa709d9c8.png)
 
