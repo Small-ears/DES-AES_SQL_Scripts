@@ -42,7 +42,7 @@ ZeroPadding
 
 
 
-#### SQL注入脚本（不同场景需要修改小部分代码，包括key）
+#### SQL注入脚本（不同场景需要修改小部分代码，如下）
 
 AES_SQL.php #**POST方式提交**，使用ECB以及Pkcs7填充方式，ECB模式无法加入随机数；
 
@@ -50,11 +50,11 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
 
 其他：
 
-- 加密的模式以及填充方式不同会导致密文不通
+- 加密的模式以及填充方式不同会导致密文不同
 
 - 有使用随机数的可以看test文件夹下的脚本，脚本中有示例，参照进行修改
 
-- 加密模式
+- 加密模式修改示例
 
   ```
   //CBC
@@ -70,7 +70,7 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
   $encrypted = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $plaintext, MCRYPT_MODE_OFB, $iv);
   ```
 
-- 填充方式
+- 填充方式修改示例代码
 
   ```
   //ISO 10126 填充方式：
@@ -93,7 +93,7 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
   $plaintext .= $padding;
   ```
 
-- 请求数据，JSON格式
+- 请求数据，JSON格式修改示例
   ```
   $data = array("name" => "John Doe", "email" => "johndoe@example.com");  //key value
   $data_json = json_encode($data);
@@ -243,10 +243,11 @@ DES注入脚本一致，因此不做验证。
 需要注意的点如下：
 
 - DES使用php编写出来的注入脚本对key的长度有限制，DES key必须小于等于8个字节，在crypto-js中可以超出该限制，所以超过8个字节的key无法使用DES注入脚本，AES无限制；
-- 传参必须要和浏览器提交的参数格式一致，注入前先提交一遍，查看格式在改脚本进行注入；
-- AES以及DES需要确认加密方式以及填充方式，根据特征寻找。
-- 在vscode有一个插件会检查代码错误，版本不符合有些就会标红，不用管。
+- 传参必须要和浏览器提交的参数view soure格式一致，注入前先提交一遍，查看格式在改脚本进行注入；
+- AES以及DES需要确认加密方式以及填充方式，根据特征寻找，在根据上述提供修改示例替换对应代码，变量名。
+- 在vscode有一个插件（php intelephense）会检查代码错误，版本不符合有些就会标红，不用管。
 - 修改脚本中的key
+- 运行脚本时可以使用wireshark确认提交的HTTP请求数据是否有误；
 
 ### 0x05 前端寻找key的方式： 
 
