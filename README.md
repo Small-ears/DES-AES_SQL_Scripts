@@ -42,11 +42,13 @@ ZeroPadding
 
 
 
-#### SQL注入脚本（不同场景需要修改小部分代码，如下）
+#### SQL注入脚本
 
 AES_SQL.php #**POST方式提交**，使用ECB以及Pkcs7填充方式，ECB模式无法加入随机数；
 
-DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的提交方式，把AES的提交方式复制替换就可
+DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的提交方式，把AES的提交方式复制替换就可。
+
+注：注入脚本有时需要根据实际环境对代码进行调整，比如加密方式、填充方式、key、POST提交数据请求参数名以及格式，以下为修改代码的示例，根据场景复制替换脚本代码即可。
 
 其他：
 
@@ -99,6 +101,25 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
   $data_json = json_encode($data);
 
   curl_setopt($curl, CURLOPT_POSTFIELDS, $data_json);   //引入请求
+  ```
+
+- 随机user-agent
+  ```
+  // 定义多个 User-Agent
+  $user_agents = [
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebkit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3 Edge/16.16299'
+  ];
+
+  //随机选择一个 User-Agent
+  $rand_index = array_rand($user_agents);
+  $rand_user_agent = $user_agents[$rand_index];
+
+  $headers = array(                             //请求头根据需求自加自减
+      'Content-Type: application/x-www-form-urlencoded',
+      'User-Agent: ' . $rand_user_agent,   //使用.进行连接
+  );
   ```
 
 ### 0x04 功能演示
