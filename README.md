@@ -4,7 +4,7 @@
 
 ### 0x02 环境需求
 
-需要使用 PHP 7.1 及以下版本，因此mcrypt 加密扩展已经在 PHP 7.2 中被弃用，加解密脚本因为直接调用远端加密库，因此需要能访问互联网，其他脚本不用，php环境可以使用phpStudy，灵活切换php版本。
+需要使用 PHP 7.1 及以下版本，mcrypt 加密扩展已经在 PHP 7.2 中被弃用；加解密脚本因为直接调用远端加密库，因此需要能访问互联网，其他脚本不用；php环境可以使用phpStudy，灵活切换php版本。
 
 ![06](https://user-images.githubusercontent.com/56350031/229093307-0150d6f6-87f4-4433-ae58-8bdca0db05a1.jpg)
 
