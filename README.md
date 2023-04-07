@@ -343,7 +343,7 @@ function Encrypt(xxx){
 
 ![image](https://user-images.githubusercontent.com/56350031/230546780-071f15bd-0d55-4205-ab19-77fd904a6a9c.png)
 
-下断点后运行这段代码后，可以看到key，另外实际这里的#hdnKey是一个jQuery选择器，它用于获取一个id为hdnKey的HTML元素的值，在前端html搜索#hdnKey就能定位出key；
+下断点后运行这段代码后，可以看到key，另外实际这里的#hdnKey它用于获取一个id为hdnKey的HTML元素的值，在前端html搜索#hdnKey就能定位出key；
 
 ![image](https://user-images.githubusercontent.com/56350031/230547033-79a73f25-ea88-4a85-b7b0-4ccedaef7d85.png)
 
