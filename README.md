@@ -331,4 +331,22 @@ function Encrypt(xxx){
 
 此加密方式为3DES，后续在补充注入脚本
 
-案例二、（待补充）
+#### 案例二、(AES)
+
+在search直接搜索关键字encrypt或者txtPassword都可以，大概定位到关键代码
+
+![image](https://user-images.githubusercontent.com/56350031/230545999-9d58a790-42c7-441e-87d8-8eaa1a359401.png)
+
+点击定位到的代码跟进login文件中，这里已经能看到加密方式，我们在189行下断点跟一下看看key的值
+
+![image](https://user-images.githubusercontent.com/56350031/230546360-9df20408-1e92-4c1c-828c-20b46305d7d6.png)
+
+![image](https://user-images.githubusercontent.com/56350031/230546780-071f15bd-0d55-4205-ab19-77fd904a6a9c.png)
+
+下断点后运行这段代码后，可以看到key，另外实际这里的#hdnKey是一个jQuery选择器，它用于获取一个id为hdnKey的HTML元素的值，在前端html搜索#hdnKey就能定位出key；
+
+![image](https://user-images.githubusercontent.com/56350031/230547033-79a73f25-ea88-4a85-b7b0-4ccedaef7d85.png)
+
+
+其他复杂场景待补充
+
