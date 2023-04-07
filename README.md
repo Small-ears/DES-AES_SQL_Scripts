@@ -319,7 +319,8 @@ function Encrypt(xxx){
     var xxx = xxx.AES.encrypt(xxx);  
 } 
 ```
-案例一、（较简单）
+#### 案例一、（较简单）
+
 登录时发现密码是加密的，这里使用关键词encrypt进行搜索，搜索encrypt后可以看到找到了我们想要的结果，跟进去下断点，获取key
 
 ![image](https://user-images.githubusercontent.com/56350031/230535422-486cb97d-8fbe-4086-8d04-5842efd68f50.png)
@@ -329,4 +330,5 @@ function Encrypt(xxx){
 ![image](https://user-images.githubusercontent.com/56350031/230535734-8553b86c-8296-42b4-b227-4f85fc42980b.png)
 
 此加密方式为3DES，后续在补充注入脚本
+
 案例二、（待补充）
