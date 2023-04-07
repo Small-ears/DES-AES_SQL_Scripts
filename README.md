@@ -328,4 +328,5 @@ function Encrypt(xxx){
 
 ![image](https://user-images.githubusercontent.com/56350031/230535734-8553b86c-8296-42b4-b227-4f85fc42980b.png)
 
+此加密方式为3DES，后续在补充注入脚本
 案例二、（待补充）
