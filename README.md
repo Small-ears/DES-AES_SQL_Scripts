@@ -319,5 +319,13 @@ function Encrypt(xxx){
     var xxx = xxx.AES.encrypt(xxx);  
 } 
 ```
+案例一、（较简单）
+登录时发现密码是加密的，这里使用关键词encrypt进行搜索，搜索encrypt后可以看到找到了我们想要的结果，跟进去下断点，获取key
 
-搜到关键字后下断点找key，详细的方式待补充：URL
+![image](https://user-images.githubusercontent.com/56350031/230535422-486cb97d-8fbe-4086-8d04-5842efd68f50.png)
+
+点击搜索结果，跟进index文件后就能看到加密方法以及key等
+
+![image](https://user-images.githubusercontent.com/56350031/230535734-8553b86c-8296-42b4-b227-4f85fc42980b.png)
+
+案例二、（待补充）
