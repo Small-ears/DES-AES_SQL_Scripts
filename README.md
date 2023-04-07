@@ -283,6 +283,8 @@ DES注入脚本一致，因此不做验证。
 
 浏览器F12，search关键词有：encrypt、passwd、password、MD5、AES、DES等
 
+密文：基本上都是base64后的一串字符，大概猜测可能是这几种加密方式；
+
 RSA特征
 
 ```
@@ -348,6 +350,15 @@ function Encrypt(xxx){
 
 ![image](https://user-images.githubusercontent.com/56350031/230547033-79a73f25-ea88-4a85-b7b0-4ccedaef7d85.png)
 
+#### 案例三、（RSA）
+
+老办法直接搜索关键字encrypt,可以看到已经找到了RSA加密的特征
+
+![image](https://user-images.githubusercontent.com/56350031/230550553-060586dd-96df-4906-8b1c-aeb9ea86d07b.png)
+
+跟进去下断点后，再次提交，运行代码，拿到key
+
+![image](https://user-images.githubusercontent.com/56350031/230550983-cd3be147-b10e-49f8-b404-0b45cc8bcaa7.png)
 
 其他复杂场景待补充
 
