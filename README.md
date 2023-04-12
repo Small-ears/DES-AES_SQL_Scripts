@@ -332,7 +332,7 @@ function Encrypt(xxx){
 
 ![image](https://user-images.githubusercontent.com/56350031/230535734-8553b86c-8296-42b4-b227-4f85fc42980b.png)
 
-此加密方式为3DES，后续在补充注入脚本
+这里只是展示寻找key的方式，3des可能存在1个以上的key，因此这里是不完整的。
 
 #### 案例二、(AES)
 
