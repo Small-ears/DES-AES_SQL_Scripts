@@ -1,19 +1,19 @@
 <?php
-// 接收GET请求中的参数,需要更多参数可以自加自减
+// 接收GET请求中的参数
 $param1 = $_GET['param1'];
 $param2 = $_GET['param2'];
 
-// 设置key
+// 设置key,根据抓出来的key进行替换
 $key = "akcdefg3bcdkffff";   
 
 
-$block_size = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);   //加密模式
+$block_size = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);   //ECB加密模式
 
-//填充方式param1处理
+//设置param1的填充方式
 $pad_size = $block_size - (strlen($param1) % $block_size);
 $param1 .= str_repeat(chr($pad_size), $pad_size);
 
-//param2处理
+//param2
 $pad_size = $block_size - (strlen($param2) % $block_size);
 $param2 .= str_repeat(chr($pad_size), $pad_size);
 
