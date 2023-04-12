@@ -12,11 +12,9 @@
 
 #### 加解密脚本
 
-AES_decryption.php 、AES_encrypt.php、DES_decryption.php、DES_encrypt.php
+AES_decryption.php 、AES_encrypt.php、DES_decryption.php、DES_encrypt.php、RSA_encrypt.php
 
-RSA  //不涉及加密模式以及填充方式
-
-//使用ECB，Pkcs7填充模式，如果需要其他模式可以找到mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7，更改ECB以及Pkcs7即可，代码中已添加详细注释；
+//使用ECB，Pkcs7填充模式，如果需要其他模式可以找到mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7，更改ECB以及Pkcs7即可，代码中已添加详细注释，RSA不涉及加密模式以及填充方式，使用js库进行加密；
 
 加密模式（可选项）：
 
@@ -52,11 +50,9 @@ DES_SQL.php #**GET方式提交**，其余和AES的一样，如果遇到POST的�
 
 其他：
 
-- 加密的模式以及填充方式不同会导致密文不同
-
 - 有使用随机数的可以看test文件夹下的脚本，脚本中有示例，参照进行修改
 
-- 加密模式修改示例
+- php加密模式修改示例
 
   ```
   //CBC
